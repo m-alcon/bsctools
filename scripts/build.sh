@@ -1,10 +1,11 @@
 #!/bin/bash
 
 if [ "$1" = "arm" ]; then
-    docker pull miquelalcon/bsctools:arm64v8
+    $img="miquelalcon/bsctools:arm64v8"
 else
-    docker pull miquelalcon/bsctools:latest #x86_64
+    $img="miquelalcon/bsctools:latest" #x86_64
 fi
+docker pull $img
 
 docker run -dit                         \
     --privileged                        \
@@ -12,6 +13,6 @@ docker run -dit                         \
     -e DISPLAY=$DISPLAY                 \
     -v /tmp/.X11-unix:/tmp/.X11-unix    \
     -v `pwd`/workspace:/workspace       \
-    miquelalcon/bsctools:latest         \
+    $img                                \
     /bin/bash
 ./scripts/enter.sh
