@@ -7,5 +7,6 @@ docker run -dit                         \
     -e DISPLAY=$DISPLAY                 \
     -v /tmp/.X11-unix:/tmp/.X11-unix    \
     -v `pwd`/workspace:/workspace       \
-    miquelalcon/bsctools:latest
+    miquelalcon/bsctools:latest         \
+    /bin/bash
 ./scripts/enter.sh
