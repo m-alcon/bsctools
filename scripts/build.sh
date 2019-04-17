@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [ "$1" = "arm" ]; then
-    $img="miquelalcon/bsctools:arm64v8"
+    img="miquelalcon/bsctools:arm64v8"
 else
-    $img="miquelalcon/bsctools:latest" #x86_64
+    img="miquelalcon/bsctools:latest" #x86_64
 fi
 docker pull $img
 
