@@ -40,12 +40,12 @@ $ paraver
 
 > The container does not have internet connection.<br>
 > Remove the wrong-created container
-```console
-$ docker rm bsc_tools
-```
+> ```console
+> $ docker rm bsc_tools
+> ```
 > Modify the `scripts/build.sh` file, adding the following line with the DNS of the host machine
-```bash
-    --name bsc_tools                    \
-    --dns DNS_of_the_host_machine       \
-    -e DISPLAY=$DISPLAY                 \
-```
+> ```bash
+>     --name bsc_tools                    \
+>     --dns DNS_of_the_host_machine       \
+>     -e DISPLAY=$DISPLAY                 \
+> ```
