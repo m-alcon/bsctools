@@ -1,8 +1,13 @@
 # BSC Tools
+We provide two Docker images for architectures *x86-64* and *arm64v8* that have installed the BSC tools **extrae** and (for *x86-64*) **paraver**.
 ## Container management
 To download and build the container:
 ```console
 $ ./scripts/build.sh
+```
+If you want to build the containerfor *arm64v8*:
+```console
+$ ./scripts/build.sh arm
 ```
 When the container is stopped and you want to start it:
 ```console
@@ -25,11 +30,22 @@ To stop the container:
 ```console
 $ ./extrae.sh your_program
 ```
-The *extrae* traces will be saved inside the `traces` folder. To visualize this traces, the container also includes the *paraver* tool. 
+The **extrae** traces will be saved inside the `traces` folder. To visualize this traces, the container also includes the **paraver** tool. 
 ```console
 $ paraver
 ```
 ## Possible errors
-### Paraver
-> `Error: Unable to initialize gtk, is DISPLAY set properly?`<br>
+> When executing **paraver**, `Error: Unable to initialize gtk, is DISPLAY set properly?`<br>
 > Execute the command `xhost +` in the host machine.
+
+> The container does not have internet connection.<br>
+> Remove the wrong-created container
+```console
+$ docker rm bsc_tools
+```
+> Modify the `scripts/build.sh` file, adding the following line with the DNS of the host machine
+```bash
+    --name bsc_tools                    \
+    --dns DNS_of_the_host_machine       \
+    -e DISPLAY=$DISPLAY                 \
+```
