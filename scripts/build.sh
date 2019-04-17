@@ -8,4 +8,4 @@ docker run -dit                         \
     -v /tmp/.X11-unix:/tmp/.X11-unix    \
     -v `pwd`/workspace:/workspace       \
     miquelalcon/bsctools:latest
-./scripts/into.sh
+./scripts/enter.sh
