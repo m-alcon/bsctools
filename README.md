@@ -6,4 +6,5 @@ Once you have your application compiled, launch your program with the script `./
 
 ## Possible errors
 ### Paraver
->`Error: Unable to initialize gtk, is DISPLAY set properly?`. Solution: execute the command `xhost +` in the host machine.
+> `Error: Unable to initialize gtk, is DISPLAY set properly?` 
+	**Solution**: execute the command `xhost +` in the host machine.
