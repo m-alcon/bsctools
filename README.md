@@ -1,11 +1,11 @@
 # BSC Tools
 We provide two Docker images for architectures *x86-64* and *arm64v8* that have installed the BSC tools **extrae** and (for *x86-64*) **paraver**.
 ## Container management
-To download and build the container:
+To download and build the container for *x86-64*:
 ```console
 $ ./scripts/build.sh
 ```
-If you want to build the container for *arm64v8*:
+To download and build the container for *arm64v8*:
 ```console
 $ ./scripts/build.sh arm
 ```
