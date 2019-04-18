@@ -30,7 +30,7 @@ To stop the container:
 ```console
 $ ./extrae.sh your_program
 ```
-The **extrae** traces will be saved inside the `traces` folder. To visualize this traces, the container also includes the **paraver** tool. 
+The **extrae** traces will be saved inside the `traces` folder. To visualize this traces, the container for *x86-64* also includes the **paraver** tool. 
 ```console
 $ paraver
 ```
