@@ -5,7 +5,7 @@ To download and build the container:
 ```console
 $ ./scripts/build.sh
 ```
-If you want to build the containerfor *arm64v8*:
+If you want to build the container for *arm64v8*:
 ```console
 $ ./scripts/build.sh arm
 ```
@@ -48,3 +48,4 @@ $ paraver
 >     --name bsc_tools                    \
 >     -e DISPLAY=$DISPLAY                 \
 > ```
+> * Rebuild the container.
