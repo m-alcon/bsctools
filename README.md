@@ -39,13 +39,12 @@ $ paraver
 > * Execute the command `xhost +` in the host machine.
 
 > The container does not have internet connection.<br>
-> * Remove the wrong-created container
+> * Remove the wrong-created container:
 > ```console
 > $ docker rm bsc_tools
 > ```
-> * Modify the `scripts/build.sh` file, adding the following line with the DNS of the host machine
+> * Modify the `scripts/build.sh` file, adding `--dns DNS_of_the_host_machine       \` with the DNS of the host machine between these two lines:
 > ```bash
 >     --name bsc_tools                    \
->     --dns DNS_of_the_host_machine       \
 >     -e DISPLAY=$DISPLAY                 \
 > ```
