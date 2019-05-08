@@ -1,13 +1,13 @@
 # BSC Tools
-We provide two Docker images for architectures *x86-64* and *arm64v8* that have installed the BSC tools **extrae** and (for *x86-64*) **paraver**.
+We provide two Docker images for architectures *x86-64* and *arm64v8* that have installed the BSC tools **extrae**. Only *x86-64* includes **paraver**, and only *arm64v8* has installed *CUDA*.
 ## Container management
 To download and build the container for *x86-64*:
 ```console
-$ ./scripts/build.sh
+$ ./scripts/build_x86.sh
 ```
 To download and build the container for *arm64v8*:
 ```console
-$ ./scripts/build.sh arm
+$ ./scripts/build_arm.sh
 ```
 When the container is stopped and you want to start it:
 ```console
@@ -43,9 +43,10 @@ $ paraver
 > ```console
 > $ docker rm bsc_tools
 > ```
-> * Modify the `scripts/build.sh` file, adding `--dns DNS_of_the_host_machine       \` with the DNS of the host machine between these two lines:
+> * Modify the `scripts/build.sh` file, uncommenting `--dns DNS_of_the_host_machine` and adding the DNS of the host machine:
 > ```bash
 >     --name bsc_tools                    \
+>	  --dns DNS_of_the_host_machine		  \
 >     -e DISPLAY=$DISPLAY                 \
 > ```
 > * Rebuild the container.
