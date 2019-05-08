@@ -1,5 +1,5 @@
 # BSC Tools
-We provide two Docker images for architectures *x86-64* and *arm64v8* that have installed the BSC tools **extrae**. Only *x86-64* includes **paraver**, and only *arm64v8* has installed *CUDA*.
+We provide two Docker images for architectures *x86-64* and *arm64v8* that have installed the BSC tools **extrae**. Only *x86-64* includes **paraver**, and only *arm64v8* has installed *CUDA 10*.
 ## Container management
 To download and build the container for *x86-64*:
 ```console
