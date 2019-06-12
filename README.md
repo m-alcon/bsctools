@@ -1,13 +1,9 @@
 # BSC Tools
-We provide two Docker images for architectures *x86-64* and *arm64v8* that have installed the BSC tools **extrae** and (for *x86-64*) **paraver**.
+We provide a Docker image for *Jetson Xavier* that have installed the BSC tool **extrae** with CUDA functionalities.
 ## Container management
 To download and build the container:
 ```console
 $ ./scripts/build.sh
-```
-If you want to build the containerfor *arm64v8*:
-```console
-$ ./scripts/build.sh arm
 ```
 When the container is stopped and you want to start it:
 ```console
